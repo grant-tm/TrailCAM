@@ -4,26 +4,34 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1">
   <MAINGROUP id="C7RoQ5" name="TrailCAM">
     <GROUP id="{AF836388-9CB4-0C7E-FCB5-C66D8A5AC1BF}" name="Source">
-      <FILE id="GwlTyo" name="FolderIcon.png" compile="0" resource="1" file="Source/FolderIcon.png"/>
+      <FILE id="rdcZ8J" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="hMBZdg" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+      <FILE id="wgvi3z" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <GROUP id="{0E7104C2-9692-A7A7-5058-4F1D82BBA7E7}" name="FileViewer">
+        <FILE id="RxbIZ4" name="FileViewer.cpp" compile="1" resource="0" file="Source/FileViewer/FileViewer.cpp"/>
+        <FILE id="P3gkvW" name="FileViewer.h" compile="0" resource="0" file="Source/FileViewer/FileViewer.h"/>
+        <FILE id="GIC96u" name="FileViewListBox.cpp" compile="1" resource="0"
+              file="Source/FileViewer/FileViewListBox.cpp"/>
+        <FILE id="h7SKb3" name="FileViewListBox.h" compile="0" resource="0"
+              file="Source/FileViewer/FileViewListBox.h"/>
+        <FILE id="Sc51LP" name="FolderIcon.png" compile="0" resource="1" file="Source/FileViewer/FolderIcon.png"/>
+      </GROUP>
+      <GROUP id="{3F389AC5-0BE8-C71D-0BF6-2AE1A8AC74FA}" name="ImageManager">
+        <FILE id="ucVrmP" name="AsyncImageLoader.cpp" compile="1" resource="0"
+              file="Source/ImageManager/AsyncImageLoader.cpp"/>
+        <FILE id="Ufewyh" name="AsyncImageLoader.h" compile="0" resource="0"
+              file="Source/ImageManager/AsyncImageLoader.h"/>
+        <FILE id="nNfSAy" name="ImageCachingThread.cpp" compile="1" resource="0"
+              file="Source/ImageManager/ImageCachingThread.cpp"/>
+        <FILE id="JwxYzI" name="ImageCachingThread.h" compile="0" resource="0"
+              file="Source/ImageManager/ImageCachingThread.h"/>
+        <FILE id="RLTSnD" name="ImageManager.cpp" compile="1" resource="0"
+              file="Source/ImageManager/ImageManager.cpp"/>
+        <FILE id="qZk940" name="ImageManager.h" compile="0" resource="0" file="Source/ImageManager/ImageManager.h"/>
+      </GROUP>
       <FILE id="AeLiyr" name="ColorPalette.h" compile="0" resource="0" file="Source/ColorPalette.h"/>
-      <FILE id="jCtVhk" name="FileViewer.cpp" compile="1" resource="0" file="Source/FileViewer.cpp"/>
-      <FILE id="aIw0P8" name="FileViewer.h" compile="0" resource="0" file="Source/FileViewer.h"/>
-      <FILE id="fiw10k" name="ImageCachingThread.cpp" compile="1" resource="0"
-            file="Source/ImageCachingThread.cpp"/>
-      <FILE id="Kk6xpp" name="ImageCachingThread.h" compile="0" resource="0"
-            file="Source/ImageCachingThread.h"/>
-      <FILE id="vG7aLW" name="ImageFileFilter.cpp" compile="1" resource="0"
-            file="Source/ImageFileFilter.cpp"/>
-      <FILE id="njENp1" name="ImageFileFilter.h" compile="0" resource="0"
-            file="Source/ImageFileFilter.h"/>
-      <FILE id="ZiIBJ6" name="ImageManager.cpp" compile="1" resource="0"
-            file="Source/ImageManager.cpp"/>
-      <FILE id="iWl9Hq" name="ImageManager.h" compile="0" resource="0" file="Source/ImageManager.h"/>
     </GROUP>
-    <FILE id="rdcZ8J" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
-    <FILE id="hMBZdg" name="MainComponent.cpp" compile="1" resource="0"
-          file="Source/MainComponent.cpp"/>
-    <FILE id="wgvi3z" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
   </MAINGROUP>
   <MODULES>
     <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>

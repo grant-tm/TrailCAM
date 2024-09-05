@@ -3,10 +3,9 @@
 #include <JuceHeader.h>
 #include "ColorPalette.h"
 
-#include "FileViewer.h"
+#include "FileViewer/FileViewer.h"
 
-#include "ImageFileFilter.h"
-#include "ImageManager.h"
+#include "ImageManager/ImageManager.h"
 
 //=============================================================================
 class MainComponent : 
