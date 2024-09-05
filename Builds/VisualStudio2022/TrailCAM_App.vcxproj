@@ -141,6 +141,9 @@
     <Lib/>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\ImageCachingThread.cpp"/>
+    <ClCompile Include="..\..\Source\ImageManager.cpp"/>
+    <ClCompile Include="..\..\Source\ImageFileFilter.cpp"/>
     <ClCompile Include="..\..\Source\Main.cpp"/>
     <ClCompile Include="..\..\Source\MainComponent.cpp"/>
     <ClCompile Include="..\..\..\..\modules\juce_core\containers\juce_AbstractFifo.cpp">
@@ -1652,6 +1655,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\ImageCachingThread.h"/>
+    <ClInclude Include="..\..\Source\ImageManager.h"/>
+    <ClInclude Include="..\..\Source\ImageFileFilter.h"/>
+    <ClInclude Include="..\..\Source\ColorPalette.h"/>
     <ClInclude Include="..\..\Source\MainComponent.h"/>
     <ClInclude Include="..\..\..\..\modules\juce_core\containers\juce_AbstractFifo.h"/>
     <ClInclude Include="..\..\..\..\modules\juce_core\containers\juce_Array.h"/>

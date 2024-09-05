@@ -4,6 +4,18 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1">
   <MAINGROUP id="C7RoQ5" name="TrailCAM">
     <GROUP id="{AF836388-9CB4-0C7E-FCB5-C66D8A5AC1BF}" name="Source">
+      <FILE id="eZSNS5" name="ImageCachingThread.cpp" compile="1" resource="0"
+            file="Source/ImageCachingThread.cpp"/>
+      <FILE id="jZkcxn" name="ImageCachingThread.h" compile="0" resource="0"
+            file="Source/ImageCachingThread.h"/>
+      <FILE id="xiTptJ" name="ImageManager.cpp" compile="1" resource="0"
+            file="Source/ImageManager.cpp"/>
+      <FILE id="ZEtbJO" name="ImageManager.h" compile="0" resource="0" file="Source/ImageManager.h"/>
+      <FILE id="HAr1Nw" name="ImageFileFilter.cpp" compile="1" resource="0"
+            file="Source/ImageFileFilter.cpp"/>
+      <FILE id="CckEfl" name="ImageFileFilter.h" compile="0" resource="0"
+            file="Source/ImageFileFilter.h"/>
+      <FILE id="BYHF5r" name="ColorPalette.h" compile="0" resource="0" file="Source/ColorPalette.h"/>
       <FILE id="oFKDQI" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
       <FILE id="OjXOgs" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
       <FILE id="ixbjqE" name="MainComponent.cpp" compile="1" resource="0"

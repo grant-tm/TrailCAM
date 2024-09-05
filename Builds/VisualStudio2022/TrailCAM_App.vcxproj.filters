@@ -289,6 +289,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\ImageCachingThread.cpp">
+      <Filter>TrailCAM\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ImageManager.cpp">
+      <Filter>TrailCAM\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\ImageFileFilter.cpp">
+      <Filter>TrailCAM\Source</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Main.cpp">
       <Filter>TrailCAM\Source</Filter>
     </ClCompile>
@@ -1905,6 +1914,18 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\ImageCachingThread.h">
+      <Filter>TrailCAM\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ImageManager.h">
+      <Filter>TrailCAM\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ImageFileFilter.h">
+      <Filter>TrailCAM\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ColorPalette.h">
+      <Filter>TrailCAM\Source</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\MainComponent.h">
       <Filter>TrailCAM\Source</Filter>
     </ClInclude>
