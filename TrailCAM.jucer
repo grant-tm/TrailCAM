@@ -16,11 +16,11 @@
       <FILE id="ZiIBJ6" name="ImageManager.cpp" compile="1" resource="0"
             file="Source/ImageManager.cpp"/>
       <FILE id="iWl9Hq" name="ImageManager.h" compile="0" resource="0" file="Source/ImageManager.h"/>
-      <FILE id="rdcZ8J" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
-      <FILE id="hMBZdg" name="MainComponent.cpp" compile="1" resource="0"
-            file="Source/MainComponent.cpp"/>
-      <FILE id="wgvi3z" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
     </GROUP>
+    <FILE id="rdcZ8J" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+    <FILE id="hMBZdg" name="MainComponent.cpp" compile="1" resource="0"
+          file="Source/MainComponent.cpp"/>
+    <FILE id="wgvi3z" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
   </MAINGROUP>
   <MODULES>
     <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
