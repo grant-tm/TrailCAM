@@ -4,10 +4,22 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1">
   <MAINGROUP id="C7RoQ5" name="TrailCAM">
     <GROUP id="{AF836388-9CB4-0C7E-FCB5-C66D8A5AC1BF}" name="Source">
-      <FILE id="oFKDQI" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
-      <FILE id="OjXOgs" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
-      <FILE id="ixbjqE" name="MainComponent.cpp" compile="1" resource="0"
+      <FILE id="AeLiyr" name="ColorPalette.h" compile="0" resource="0" file="Source/ColorPalette.h"/>
+      <FILE id="fiw10k" name="ImageCachingThread.cpp" compile="1" resource="0"
+            file="Source/ImageCachingThread.cpp"/>
+      <FILE id="Kk6xpp" name="ImageCachingThread.h" compile="0" resource="0"
+            file="Source/ImageCachingThread.h"/>
+      <FILE id="vG7aLW" name="ImageFileFilter.cpp" compile="1" resource="0"
+            file="Source/ImageFileFilter.cpp"/>
+      <FILE id="njENp1" name="ImageFileFilter.h" compile="0" resource="0"
+            file="Source/ImageFileFilter.h"/>
+      <FILE id="ZiIBJ6" name="ImageManager.cpp" compile="1" resource="0"
+            file="Source/ImageManager.cpp"/>
+      <FILE id="iWl9Hq" name="ImageManager.h" compile="0" resource="0" file="Source/ImageManager.h"/>
+      <FILE id="rdcZ8J" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="hMBZdg" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>
+      <FILE id="wgvi3z" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
     </GROUP>
   </MAINGROUP>
   <MODULES>

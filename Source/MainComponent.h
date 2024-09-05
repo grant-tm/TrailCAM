@@ -1,27 +1,54 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "ColorPalette.h"
+#include "ImageFileFilter.h"
+#include "ImageManager.h"
 
-//==============================================================================
-/*
-    This component lives inside our window, and this is where you should put all
-    your controls and content.
-*/
-class MainComponent  : public juce::Component
+//=============================================================================
+class MainComponent : 
+    public juce::Component,
+    public juce::FileBrowserListener
 {
 public:
-    //==============================================================================
+    //=========================================================================
     MainComponent();
     ~MainComponent() override;
 
-    //==============================================================================
-    void paint (juce::Graphics&) override;
+    //=========================================================================
+    void paint (juce::Graphics &) override;
     void resized() override;
 
 private:
-    //==============================================================================
-    // Your private member variables go here...
+    //=========================================================================
 
+    //-----------------------------------------------------
+    // FILE TREE DISPLAY
+
+    juce::StretchableLayoutManager layoutManager;
+    juce::StretchableLayoutResizerBar resizerBar;
+
+    // file filter
+    std::unique_ptr<ImageFileFilter> fileFilter;
+    
+    // directory list
+    juce::TimeSliceThread timeSliceThread;
+    juce::DirectoryContentsList directoryList;
+    
+    // file tree
+    juce::FileTreeComponent fileTree;
+    
+    void selectionChanged() override;
+    void fileClicked(const juce::File &, const juce::MouseEvent &) override;
+    void fileDoubleClicked(const juce::File &) override;
+    void browserRootChanged(const juce::File &) override {}
+
+    //-----------------------------------------------------
+    // IMAGE DISPLAY
+
+    juce::File currentDirectory;
+    ImageManager imageManager;
+    juce::ImageComponent imageDisplay;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };
