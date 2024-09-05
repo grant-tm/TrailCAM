@@ -1,27 +1,41 @@
 #include "ImageCachingThread.h"
 
-ImageCachingThread(std::map<int, juce::Image> &cache, juce::CriticalSection &lock)
-    : juce::Thread("Image Caching Thread"), imageCache(cache), cacheLock(lock) {}
-
 void ImageCachingThread::run()
 {
     while (!threadShouldExit())
     {
         cacheImagesInBackground();
+        removePendingImagesOutsideOfWindow();
         wait(50);
     }
 }
 
 void ImageCachingThread::addImageToCache(int index, const juce::File &file)
 {
-    pendingImages.add({index, file});
+    juce::ScopedLock lock(rangeLock);
+    if (index >= startIndex && index <= endIndex)
+    {
+        pendingImages.add({index, file});
+    }
+}
+    
+
+void ImageCachingThread::setWindowRange(int newStartIndex, int newEndIndex)
+{
+    juce::ScopedLock lock(rangeLock);
+    startIndex = newStartIndex;
+    endIndex = newEndIndex;
 }
 
-void ImageCachingThread::removePendingImagesOutsideOfWindow(int startIndex, int endIndex)
+void ImageCachingThread::removePendingImagesOutsideOfWindow()
 {
-    for (const auto &entry : pendingImages)
+    juce::ScopedLock lock(rangeLock);
+    for (int i = pendingImages.size() - 1; i >= 0; --i)
+    {
+        auto entry = pendingImages[i];
         if (entry.first < startIndex || entry.first > endIndex)
-            pendingImages.removeAndReturn(entry.first);
+            pendingImages.remove(i);
+    }
 }
 
 void ImageCachingThread::cacheImagesInBackground()
@@ -29,18 +43,13 @@ void ImageCachingThread::cacheImagesInBackground()
     if (!pendingImages.isEmpty())
     {
         auto imageToCache = pendingImages.removeAndReturn(0);
-
-        double startTime = juce::Time::getMillisecondCounterHiRes();
         juce::Image newImage = juce::ImageFileFormat::loadFrom(imageToCache.second);
-        double endTime = juce::Time::getMillisecondCounterHiRes();
-        double elapsedTime = endTime - startTime;
 
-        if (newImage.isValid())
+        if (newImage.isValid() && imageCache.find(imageToCache.first) == imageCache.end())
         {
             juce::ScopedLock lock(cacheLock);
             imageCache[imageToCache.first] = newImage;
-            DBG("Time taken to load image: " << elapsedTime << " ms");
-            DBG("Image cached: " << imageToCache.second.getFullPathName());
+            DBG("CACHED" << imageToCache.first);
         }
     }
 }

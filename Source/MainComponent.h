@@ -2,13 +2,16 @@
 
 #include <JuceHeader.h>
 #include "ColorPalette.h"
+
+#include "FileViewer.h"
+
 #include "ImageFileFilter.h"
 #include "ImageManager.h"
 
 //=============================================================================
 class MainComponent : 
     public juce::Component,
-    public juce::FileBrowserListener
+    public FileViewer::Listener
 {
 public:
     //=========================================================================
@@ -22,31 +25,23 @@ public:
 private:
     //=========================================================================
 
+    juce::File currentDirectory;
+    juce::TextButton selectDirectoryButton;
+    
     //-----------------------------------------------------
     // FILE TREE DISPLAY
 
+    FileViewer fileViewer;
+    void directoryChanged(juce::File) override;
+
     juce::StretchableLayoutManager layoutManager;
     juce::StretchableLayoutResizerBar resizerBar;
-
-    // file filter
-    std::unique_ptr<ImageFileFilter> fileFilter;
     
-    // directory list
-    juce::TimeSliceThread timeSliceThread;
-    juce::DirectoryContentsList directoryList;
-    
-    // file tree
-    juce::FileTreeComponent fileTree;
-    
-    void selectionChanged() override;
-    void fileClicked(const juce::File &, const juce::MouseEvent &) override;
-    void fileDoubleClicked(const juce::File &) override;
-    void browserRootChanged(const juce::File &) override {}
+    void selectionChanged(int) override;
 
     //-----------------------------------------------------
     // IMAGE DISPLAY
 
-    juce::File currentDirectory;
     ImageManager imageManager;
     juce::ImageComponent imageDisplay;
 

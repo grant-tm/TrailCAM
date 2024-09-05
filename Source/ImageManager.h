@@ -3,8 +3,6 @@
 #include <JuceHeader.h>
 #include "ImageCachingThread.h"
 
-#define MAX_CACHE_SIZE 200
-#define CACHE_LOOKBACK 50
 #define CACHE_LOOKAHEAD 150
 
 class ImageManager
@@ -15,15 +13,13 @@ public:
 
 	void setDirectory(juce::File directory);
 	void moveCacheWindow(int index);
-
-	juce::File getDirectory();
 	juce::Image getImage(int index);
 	
 	void loadAndCacheImage(int index);
 	void cacheImageInBackground(int index, const juce::File &file);
 
-	int findFurthestOutOfWindow(int windowStart, int windowEnd);
-	void releaseCachedImage(int index);
+	void clearCache() { cachedImages.clear(); }
+	void releaseCachedImagesOutsideWindow(int windowStart, int windowEnd);
 
 private:
 	juce::File selectedDirectory;
@@ -39,6 +35,6 @@ private:
 		ImageCachingThread(cachedImages, cacheLock),
 		ImageCachingThread(cachedImages, cacheLock),
 		ImageCachingThread(cachedImages, cacheLock),
-		ImageCachingThread(cachedImages, cacheLock)
+		ImageCachingThread(cachedImages, cacheLock),
 	};
 };

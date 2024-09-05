@@ -11,12 +11,17 @@ public:
 
     void run() override;
     void addImageToCache(int index, const juce::File &file);
-    void removePendingImagesOutsideOfWindow(int startIndex, int endIndex);
+    
+    void setWindowRange(int newStartIndex, int newEndIndex);
+    void removePendingImagesOutsideOfWindow();
 
 private:
     std::map<int, juce::Image> &imageCache;
     juce::CriticalSection &cacheLock;
     juce::Array<std::pair<int, juce::File>> pendingImages;
+
+    int startIndex, endIndex;
+    juce::CriticalSection rangeLock;
 
     void cacheImagesInBackground();
 };

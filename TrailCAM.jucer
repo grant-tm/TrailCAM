@@ -4,7 +4,10 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1">
   <MAINGROUP id="C7RoQ5" name="TrailCAM">
     <GROUP id="{AF836388-9CB4-0C7E-FCB5-C66D8A5AC1BF}" name="Source">
+      <FILE id="GwlTyo" name="FolderIcon.png" compile="0" resource="1" file="Source/FolderIcon.png"/>
       <FILE id="AeLiyr" name="ColorPalette.h" compile="0" resource="0" file="Source/ColorPalette.h"/>
+      <FILE id="jCtVhk" name="FileViewer.cpp" compile="1" resource="0" file="Source/FileViewer.cpp"/>
+      <FILE id="aIw0P8" name="FileViewer.h" compile="0" resource="0" file="Source/FileViewer.h"/>
       <FILE id="fiw10k" name="ImageCachingThread.cpp" compile="1" resource="0"
             file="Source/ImageCachingThread.cpp"/>
       <FILE id="Kk6xpp" name="ImageCachingThread.h" compile="0" resource="0"
@@ -31,7 +34,7 @@
   </MODULES>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
   <EXPORTFORMATS>
-    <VS2022 targetFolder="Builds/VisualStudio2022">
+    <VS2022 targetFolder="Builds/VisualStudio2022" extraDefs="JUCE_MODAL_LOOPS_PERMITTED=1">
       <CONFIGURATIONS>
         <CONFIGURATION isDebug="1" name="Debug" targetName="TrailCAM"/>
         <CONFIGURATION isDebug="0" name="Release" targetName="TrailCAM"/>
