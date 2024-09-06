@@ -22,13 +22,13 @@
               file="Source/ImageManager/AsyncImageLoader.cpp"/>
         <FILE id="Ufewyh" name="AsyncImageLoader.h" compile="0" resource="0"
               file="Source/ImageManager/AsyncImageLoader.h"/>
-        <FILE id="nNfSAy" name="ImageCachingThread.cpp" compile="1" resource="0"
-              file="Source/ImageManager/ImageCachingThread.cpp"/>
-        <FILE id="JwxYzI" name="ImageCachingThread.h" compile="0" resource="0"
-              file="Source/ImageManager/ImageCachingThread.h"/>
         <FILE id="RLTSnD" name="ImageManager.cpp" compile="1" resource="0"
               file="Source/ImageManager/ImageManager.cpp"/>
         <FILE id="qZk940" name="ImageManager.h" compile="0" resource="0" file="Source/ImageManager/ImageManager.h"/>
+        <FILE id="I1Ec5T" name="ImagePollThread.cpp" compile="1" resource="0"
+              file="Source/ImageManager/ImagePollThread.cpp"/>
+        <FILE id="kYUtsx" name="ImagePollThread.h" compile="0" resource="0"
+              file="Source/ImageManager/ImagePollThread.h"/>
       </GROUP>
       <FILE id="AeLiyr" name="ColorPalette.h" compile="0" resource="0" file="Source/ColorPalette.h"/>
     </GROUP>
