@@ -10,6 +10,7 @@ public:
     
     JobStatus runJob() override
     {
+        //juce::Logger::writeToLog("Attempting to cache: " + fileToLoad.getFileName());
         juce::Image newImage = juce::ImageFileFormat::loadFrom(fileToLoad);
         if (newImage.isValid())
         {

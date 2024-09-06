@@ -1,10 +1,9 @@
 #pragma once
 
 #include <JuceHeader.h>
-#include "ImageCachingThread.h"
 #include "AsyncImageLoader.h"
 
-#define CACHE_LOOKAHEAD 100
+#define CACHE_LOOKAHEAD 150
 
 class ImageManager
 {
@@ -23,6 +22,9 @@ public:
 
 	void clearCache() { cachedImages.clear(); }
 	void releaseCachedImagesOutsideWindow(int windowStart, int windowEnd);
+
+	juce::CriticalSection *getCacheLock() { return &cacheLock; }
+	std::map<int, juce::Image> *getCacheReference() { return &cachedImages;  }
 
 private:
 	juce::File selectedDirectory;
