@@ -30,6 +30,7 @@ public:
     // getters
     int getNumRows() override;
     juce::String getFileNameFromRow(int row);
+    void clearAll();
 
     // listener
     class Listener

@@ -129,3 +129,9 @@ juce::String FileListBox::getFileNameFromRow(int row)
     else
         return juce::String("");
 }
+
+void FileListBox::clearAll()
+{
+    //deselectAllRows();
+    listItems.clear();
+}

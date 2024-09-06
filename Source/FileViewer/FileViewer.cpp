@@ -108,8 +108,17 @@ void FileViewer::selectDirectory()
     currentDirectory = selectedFile;
     if (listener)
         listener->directoryChanged(currentDirectory);
+    listBox.clearAll();
     listBox.generateList(currentDirectory);
     listBox.updateContent();
+
+    if (listBox.getNumSelectedRows() > 0)
+    {
+        juce::SparseSet<int> selectedRow;
+        selectedRow.addRange(juce::Range<int>(0, 1));
+        listBox.setSelectedRows(selectedRow);
+    }
+
     directoryLabel.setText(currentDirectory.getFullPathName(), juce::NotificationType::dontSendNotification);
 }
 
